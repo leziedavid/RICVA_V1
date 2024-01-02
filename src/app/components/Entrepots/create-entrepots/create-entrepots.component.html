@@ -1,0 +1,238 @@
+<div>
+    <div id="layout-wrapper">
+
+        <header id="page-topbar">
+
+            <div class="row justify-content-between mx-2 ">
+                <div class="col-auto">
+
+                   <div class="mt-4">
+                       <ul class="list-inline mt-1">
+                           <li class="list-inline-item">
+                               <div class="tag tag-badge-st">
+                                   <img src="../../../assets/assets/img/cajou.png" width="30%" class="img-radius">
+                                   <span>Cajou</span>
+                                   <span class="badge">✓</span>
+                               </div>
+                           </li>
+                           <li class="list-inline-item">
+                               <div class="tag tag-badge-st">
+                                   <img src="../../../assets/assets/img/cacao.png" width="30%" class="img-radius">
+                                   <span> Cacao </span>
+                               </div>
+                           </li>
+                           <li class="list-inline-item">
+                               <div class="tag tag-badge-st">
+                                   <img src="../../../assets/assets/img/hevea.png" width="30%" class="img-radius">
+                                   <span> Hévéa</span>
+                               </div>
+                           </li>
+                           <li class="list-inline-item">
+                               <div class="tag tag-badge-st">
+                                   <img src="../../../assets/assets/img/karite.png" width="30%" class="img-radius">
+                                   <span>karité</span>
+                               </div>
+                           </li>
+
+                       </ul>
+                   </div>
+
+                </div>
+                <div class="col-auto">
+                <div class="d-flex">
+                    <!-- Btn notification-->
+
+                    <div class="dropdown d-inline-block m-3">
+                        <button type="button" class="btn account-notification" id="page-header-notifications-dropdown"
+                                data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <i class="bx bx-bell"></i>
+                            3
+                        </button>
+                        <div class="dropdown-menu dropdown-menu-lg dropdown-menu-end p-0"
+                             aria-labelledby="page-header-notifications-dropdown">
+                            <div class="p-3">
+                                <div class="row align-items-center">
+                                    <div class="col">
+                                        <h6 class="m-0" key="t-notifications"> Notifications </h6>
+                                    </div>
+                                    <div class="col-auto">
+                                        <a href="#!" class="small" key="t-view-all"> View All</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div style="max-height: 230px;"> </div>
+                        </div>
+                    </div>
+                    <!-- Btn lang-->
+
+                    <div class="dropdown d-inline-block m-3">
+                        <button type="button" class="btn"  data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <img id="header-lang-img" src="../../../assets/assets/img/flags/us.jpg" alt="Header Language" height="16">  <i class="mdi mdi-chevron-down d-none d-xl-inline-block"></i>
+                        </button>
+                        <div class="dropdown-menu dropdown-menu-end">
+                            <!-- item-->
+                            <a href="javascript:void(0);" class="dropdown-item notify-item language" data-lang="en">
+                                <img src="../../../assets/assets/img/flags/us.jpg" alt="user-image" class="me-1" height="12"> <span class="align-middle">English</span>
+                            </a>
+                            <!-- item-->
+                            <a href="javascript:void(0);" class="dropdown-item notify-item language" data-lang="sp">
+                                <img src="../../../assets/assets/img/flags/us.jpg" alt="user-image" class="me-1" height="12"> <span class="align-middle">Spanish</span>
+                            </a>
+
+                        </div>
+                    </div>
+
+                    <div class="my-3">
+                        <button type="button" class="btn account-btn " id="page-header-user-dropdown"
+                                data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                              <div class="d-flex justify-content-between">
+                                <div>
+                                    <img class="header-profile-user" src="../../../assets/assets/img/user.jpg">
+                                    <span class=" mt-2">
+                                        CAP SIKAN
+                                    </span>
+                                </div>
+                               <i class="mdi mdi-chevron-down d-none d-xl-inline-block mt-2"></i>
+                             </div>
+                        </button>
+
+                        <div class="dropdown-menu dropdown-menu-end">
+                            <a class="dropdown-item" href="#"><i class="bx bx-lock-open font-size-16 align-middle me-1"></i> <span key="t-lock-screen">Lock screen</span></a>
+                            <div class="dropdown-divider"></div>
+                            <a class="dropdown-item text-danger" (click)="logOut()"><i class="bx bx-power-off font-size-16 align-middle me-1 text-danger"></i> <span key="t-logout">Logout</span></a>
+                        </div>
+
+                    </div>
+
+                </div>
+                </div>
+            </div>
+
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-12">
+                        <div class="d-flex justify-content-between d-sm-flex align-items-center mb-1">
+
+                            <ol class="breadcrumb m-0">
+                                <li class="breadcrumb-item"><a href="javascript: void(0);">Dashboards</a></li>
+                                <li class="breadcrumb-item active">Administration</li>
+                            </ol>
+
+                            <div>
+                                <a routerLink="/entrepots" class="btn btn-return d-flex justify-content-center">
+                                    <i class="bx bx-left-arrow-alt" style="font-size: 17px;margin-right: 5px;font-weight: 800;"></i>
+                                     <strong>Précedent</strong>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <!-- content here -->
+        <div class="">
+            <div class="page-content mt-2-5" >
+                <div class="card-st p-3">
+                    <div class="d-flex justify-content-between">
+                        <div class="mt-2">
+                            <h5 *ngIf="datas.EntrepotsForm.value._id=='' "  class="text-primary-st"> Créer un entrepot </h5>
+                            <h5 *ngIf="datas.EntrepotsForm.value._id" class="text-primary-st"> Modifier l'entrepot </h5>
+                        </div>
+                    </div>
+
+                    <form [formGroup]="datas.EntrepotsForm" >
+
+                        <div class="p-5">
+                            <div class="row">
+
+                                <div *ngIf="messages" class="alert alert-danger" role="alert">
+                                   {{messages}}
+                                  </div>
+
+                                <div class="col-md-6 mt-3 mb-3">
+                                    <!-- <input type="text" formControlName="_id"> -->
+                                    <input type="hidden" formControlName="_id">
+                                    <label class="form-label">Libelle</label>
+                                    <input type="text" [ngClass]="{'is-invalid':  f.libelle.invalid && f.libelle.touched}" formControlName="libelle" class="form-control form-control-st">
+                                    <span style="color: red;" *ngIf="f.libelle.invalid && f.libelle.touched">Saisissez un libelle valide</span>
+                                </div>
+
+                                <div class="col-md-6 mt-3 mb-3">
+                                    <label class="form-label">Longtude</label>
+                                    <input [ngClass]="{'is-invalid':  f.longtude.invalid && f.longtude.touched}"  formControlName="longtude"  type="number" class="form-control form-control-st">
+                                    <span style="color: red;" *ngIf="f.longtude.invalid && f.longtude.touched">Saisissez une longtude valide</span>
+                                </div>
+
+                                <div class="col-md-6 mt-3 mb-3">
+                                    <label  class="form-label">Superficie (m2)</label>
+                                    <input [ngClass]="{'is-invalid':  f.superficie.invalid && f.superficie.touched}" formControlName="superficie" type="number" class="form-control form-control-st">
+                                    <span style="color: red;" *ngIf="f.superficie.invalid && f.superficie.touched">Saisissez une superficie valide</span>
+                                </div>
+
+                                <div class="col-md-6 mt-3 mb-3">
+                                    <label class="form-label">Latitude</label>
+                                    <input [ngClass]="{'is-invalid':  f.latitude.invalid && f.latitude.touched}" formControlName="latitude" type="number" class="form-control form-control-st">
+                                    <span style="color: red;" *ngIf="f.latitude.invalid && f.latitude.touched">Saisissez une latitude valide</span>
+                                </div>
+
+                                <div class="col-md-6 mt-3 mb-3">
+                                    <label class="form-label">Place</label>
+                                    <input [ngClass]="{'is-invalid':  f.place.invalid && f.place.touched}" formControlName="place" type="text" class="form-control form-control-st">
+                                    <span style="color: red;" *ngIf="f.place.invalid && f.place.touched">Saisissez une latitude valide</span>
+                                </div>
+
+                            </div>
+
+                            <div class="d-flex justify-content-between">
+                                <div>
+                                    <a routerLink="/entrepots"  class="btn btn-cancel"><strong>Annuler</strong></a>
+                                </div>
+                                <div class="">
+                                    <button class="btn btn-st-save" type="button" data-bs-toggle="modal" data-bs-target=".bs-example-modal-center">
+                                        <strong *ngIf="datas.EntrepotsForm.value._id=='' " >Enregistrer</strong>
+                                        <strong *ngIf="datas.EntrepotsForm.value._id" >Modifier</strong>
+                                    </button>
+                                </div>
+                            </div>
+
+                        </div>
+
+                        <div class="modal fade bs-example-modal-center" tabindex="-1" role="dialog" aria-hidden="true">
+                                <div class="modal-dialog modal-dialog-centered">
+                                    <div class="modal-content">
+                                        <div class="d-flex justify-content-end p-3">
+
+                                            <button type="button" class="btn-close btn-close-st-modal" data-bs-dismiss="modal" aria-label="Close"></button>
+                                        </div>
+                                        <div class="modal-body">
+                                            <div class="text-center">
+                                                <h5 class="text-primary-st">Voulez-vous enregistrer ?</h5>
+                                            </div>
+                                            <div class="text-center">
+                                                <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr. sed diam nonumy eirmod tempor invidunt ut labore et</p>
+
+                                            </div>
+                                            <div class="d-flex justify-content-center">
+                                                <div class="col-auto m-2">
+                                                    
+                                                    <a href="/entrepots" data-bs-dismiss="modal" aria-label="Close" class="btn btn-cancel-modal"><strong>Non</strong></a>
+                                                </div>
+                                                <div class="col-auto m-2">
+                                                    <button type="click" (click)="onSubmit()" data-bs-dismiss="modal" aria-label="Close"  class="btn btn-st-modal"><strong>Oui</strong></button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!-- (ngSubmit)="onSubmit()" -->
+                                    </div><!-- /.modal-content -->
+                                </div><!-- /.modal-dialog -->
+                        </div>
+
+                    </form>    
+                        <!-- /.modal -->
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>

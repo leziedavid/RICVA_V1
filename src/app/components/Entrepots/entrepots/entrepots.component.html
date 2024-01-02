@@ -1,0 +1,332 @@
+<div>
+    <div id="layout-wrapper">
+
+        <header id="page-topbar">
+
+            <div class="row justify-content-between mx-2 ">
+                <div class="col-auto">
+
+
+
+                   <div class="mt-4">
+                       <ul class="list-inline mt-1">
+                           <li class="list-inline-item">
+                               <div class="tag tag-badge-st">
+                                   <img src="../../../assets/assets/img/cajou.png" width="30%" class="img-radius">
+                                   <span>  Cajou</span>
+                                   <span class="badge">✓</span>
+                               </div>
+                           </li>
+                           <li class="list-inline-item">
+                               <div class="tag tag-badge-st">
+                                   <img src="../../../assets/assets/img/cacao.png" width="30%" class="img-radius">
+                                   <span>Cacao</span>
+                               </div>
+                           </li>
+                           <li class="list-inline-item">
+                               <div class="tag tag-badge-st">
+                                   <img src="../../../assets/assets/img/hevea.png" width="30%" class="img-radius">
+                                   <span>Hévéa</span>
+                               </div>
+                           </li>
+                           <li class="list-inline-item">
+                               <div class="tag tag-badge-st">
+                                   <img src="../../../assets/assets/img/karite.png" width="30%" class="img-radius">
+                                   <span>karité </span>
+                               </div>
+                           </li>
+
+                       </ul>
+                   </div>
+
+                </div>
+                <div class="col-auto">
+                <div class="d-flex">
+                    <!-- Btn notification-->
+
+                    <div class="dropdown d-inline-block m-3">
+                        <button type="button" class="btn account-notification" id="page-header-notifications-dropdown"
+                                data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <i class="bx bx-bell"></i>
+                            3
+                        </button>
+                        <div class="dropdown-menu dropdown-menu-lg dropdown-menu-end p-0"
+                             aria-labelledby="page-header-notifications-dropdown">
+                            <div class="p-3">
+                                <div class="row align-items-center">
+                                    <div class="col">
+                                        <h6 class="m-0" key="t-notifications"> Notifications </h6>
+                                    </div>
+                                    <div class="col-auto">
+                                        <a href="#!" class="small" key="t-view-all"> View All</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div style="max-height: 230px;">
+
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Btn lang-->
+
+                    <div class="dropdown d-inline-block m-3">
+                        <button type="button" class="btn"  data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <img id="header-lang-img" src="../../../assets/assets/img/flags/us.jpg" alt="Header Language" height="16">  <i class="mdi mdi-chevron-down d-none d-xl-inline-block"></i>
+                        </button>
+                        <div class="dropdown-menu dropdown-menu-end">
+                            <!-- item-->
+                            <a href="javascript:void(0);" class="dropdown-item notify-item language" data-lang="en">
+                                <img src="../../../assets/assets/img/flags/us.jpg" alt="user-image" class="me-1" height="12"> <span class="align-middle">English</span>
+                            </a>
+                            <!-- item-->
+                            <a href="javascript:void(0);" class="dropdown-item notify-item language" data-lang="sp">
+                                <img src="../../../assets/assets/img/flags/us.jpg" alt="user-image" class="me-1" height="12"> <span class="align-middle">Spanish</span>
+                            </a>
+
+                        </div>
+                    </div>
+
+                    <div class="my-3">
+                        <button type="button" class="btn account-btn " id="page-header-user-dropdown"
+                                data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                              <div class="d-flex justify-content-between">
+                                <div>
+                                    <img class="header-profile-user" src="../../../assets/assets/img/user.jpg">
+                                    <span class=" mt-2">
+                                   CAP SIKAN</span>
+                                </div>
+                               <i class="mdi mdi-chevron-down d-none d-xl-inline-block mt-2"></i>
+                             </div>
+                        </button>
+                        
+                        <div class="dropdown-menu dropdown-menu-end">
+                            <a class="dropdown-item" href="#"><i class="bx bx-lock-open font-size-16 align-middle me-1"></i> <span key="t-lock-screen">Lock screen</span></a>
+                            <div class="dropdown-divider"></div>
+                            <a class="dropdown-item text-danger" (click)="logOut()"><i class="bx bx-power-off font-size-16 align-middle me-1 text-danger"></i> <span key="t-logout">Logout</span></a>
+                        </div>
+
+                    </div>
+
+                </div>
+                </div>
+            </div>
+
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-12">
+                        <div class="d-flex justify-content-between d-sm-flex align-items-center mb-1">
+
+                            <ol class="breadcrumb m-0">
+                                <li class="breadcrumb-item"><a href="javascript: void(0);">Dashboards</a></li>
+                                <li class="breadcrumb-item active">Administration</li>
+                            </ol>
+
+                            <div>
+                                <a  href="/create-entrepots" class="btn btn-st-create"><strong>Créer un entrepot</strong></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <!-- Right content here -->
+        <div class="vertical-menu mt-4-st">
+            <div data-simplebar class="h-100">
+                <div id="sidebar-menu">
+                   <div>
+                       <ul class="metismenu list-unstyled" id="side-menu">
+                           <li>
+                               <a href="javascript: void(0);" class="select-link">
+                                   <div class="d-flex justify-content-between">
+                                       <span>Campagnes</span>
+                                       <span>12</span>
+                                   </div>
+                               </a>
+                           </li>
+                           <li>
+                               <a href="javascript: void(0);" class="select-link select-link">
+                                   <div class="d-flex justify-content-between">
+                                   <span>Details campagne</span>
+                                   <span>12</span>
+                                   </div>
+                               </a>
+                           </li>
+                           <li>
+                               <a href="javascript: void(0);" class="select-link">
+                                   <div class="d-flex justify-content-between">
+                                       <span>Spéculations</span>
+                                       <span>12</span>
+                                   </div>
+                               </a>
+                           </li>
+                           <li>
+                               <a href="javascript: void(0);" class="select-link">
+                                   <div class="d-flex justify-content-between">
+                                       <span>Details spéculations</span>
+                                       <span>12</span>
+                                   </div>
+                               </a>
+                           </li>
+                           <li>
+                               <a routerLink="/entrepots"  class="select-link-active">
+                                   <div class="d-flex justify-content-between">
+                                       <span>Entrepots</span>
+                                       <span>12</span>
+                                   </div>
+                               </a>
+                           </li>
+
+                           <li>
+                            <a href="javascript: void(0);" class="select-link">
+                                <div class="d-flex justify-content-between">
+                                    <span>Groupements</span>
+                                    <span>12</span>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="javascript: void(0);" class="select-link">
+                                <div class="d-flex justify-content-between">
+                                    <span>Exportateurs</span>
+                                    <span>12</span>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="javascript: void(0);" class="select-link">
+                                <div class="d-flex justify-content-between">
+                                    <span>Affectations exportateurs</span>
+                                    <span>12</span>
+                                </div>
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="javascript: void(0);" class="select-link">
+                                <div class="d-flex justify-content-between">
+                                    <span>Villes</span>
+                                    <span>12</span>
+                                </div>
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="javascript: void(0);" class="select-link">
+                                <div class="d-flex justify-content-between">
+                                    <span>Sites</span>
+                                    <span>12</span>
+                                </div>
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="javascript: void(0);" class="select-link">
+                                <div class="d-flex justify-content-between">
+                                    <span>Zonages</span>
+                                    <span>12</span>
+                                </div>
+                            </a>
+                        </li>
+
+                       </ul>
+                   </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- content here -->
+        <div class="main-content">
+            <div class="page-content mt-2-5" >
+                <div class="card-st p-3">
+                    <div class="d-flex justify-content-between">
+                        <div class="mt-2">
+                            <h5 class="text-primary-st">
+                                Historique entrepots
+                            </h5>
+                        </div>
+                        <form class="app-search">
+                            <div class="position-relative">
+                                <input type="text" class="form-control" placeholder="Search...">
+                                <span class="bx bx-search-alt"></span>
+                            </div>
+                        </form>
+
+                    </div>
+                    
+                    <!-- <ngx-spinner bdColor="rgba(51,51,51,0.8)" size="medium" color="#fff" type="ball-scale-multiple">
+                        <p style="font-size: 20px; color: white">Loading...</p>
+                    </ngx-spinner> -->
+
+                    <ngx-spinner bdColor = "rgba(0, 0, 0, 0.8)" size = "large" color = "#fff" type = "ball-triangle-path" [fullScreen] = "true"><p style="color: white" > Chargement... </p></ngx-spinner>                    
+                    <div class="table-responsive mt-4">
+                        <table class="table table-striped mb-0">
+                            <thead class="table-light">
+                            <tr>
+                                <th class="align-middle left-radius">Libellé</th>
+                                <th class="align-middle">longtude)</th>
+                                <th class="align-middle">latitude)</th>
+                                <th class="align-middle">Superficie (M.2)</th>
+                                <th class="align-middle">Placer</th>
+                                <th class="align-middle right-radius">Action</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr  *ngFor="let item of ListeEntrepots">
+                                <td>
+                                    <a href="javascript: void(0);" class="text-body fw-bold">{{item.libelle| uppercase}}</a> 
+                                </td>
+                        
+                                <td>{{item.longtude}}</td>
+                                <td>{{item.latitude}}</td>
+                                <td>{{item.superficie}}</td>
+                                <td>{{item.place| uppercase}}</td>
+                                <td>
+                                    <div class="d-flex">
+                                        <div  class="mt-2 mr-1"> <i (click)="onShow(item)"  class="bx bx-show-alt font-size-20"></i></div>
+                                        <div  class="mt-2 mr-1"> <i (click)="onEdit(item)"  class="bx bx-right-arrow-alt font-size-20"></i></div>
+                                        <button (click)="onDelete(item.id)" class="btn btn-delete">  <i class="bx bxs-trash-alt"></i> </button> &nbsp;&nbsp;&nbsp;
+
+                                    </div>
+                                </td>
+
+                            </tr>
+
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <div class="d-flex flex-wrap justify-content-between mt-4">
+
+                        <div class="d-flex justify-content-around">
+                            <h6 class="mt-2 m-2">Afficher</h6>
+                            <div class="col-md-7">
+                                <select class="form-select">
+                                    <option>50</option>
+                                    <option>100</option>
+                                    <option>200</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="d-flex justify-content-around">
+                            <h6 class="mt-2 m-2">5/100</h6>
+                            <div class="col-md-12">
+                                <button class="btn btn-outline-light waves-effect">
+                                    <span> Voir plus</span>
+                                    <i class="bx bx-down-arrow-alt btn-nav-button"></i>
+                                </button>
+                            </div>
+                        </div>
+                        <div>
+                            <button class="btn btn-outline-light waves-effect">
+                                <span>Retour en haut</span>
+                                <i class="bx bx-up-arrow-alt btn-nav-button"></i>
+                            </button>
+                        </div>
+
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>

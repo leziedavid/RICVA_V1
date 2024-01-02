@@ -1,0 +1,133 @@
+
+
+<div>
+  <div class="container-fluid p-0">
+      <div class="row g-0">
+          <div class="col-xl-7">
+              <div class="auth-full-bg pt-lg-5 p-4">
+                  <div class="w-100">
+                      <div class="bg-overlay"></div>
+                      <div class="d-flex h-100 flex-column">
+                          <div class="p-5 mt-20">
+                              <div class="row">
+                                  <div class="col-lg-7">
+                                      <div class="">
+                                          <h1 class="mb-3 text-white font-size-title">BIENVENUE <br/>SUR RICVA  </h1>
+
+                                      </div>
+                                  </div>
+                                  <div class="col-lg-9">
+                                      <div class="owl-item">
+                                          <div class="py-3">
+                                              <p class="text-white font-size-16 mb-4">RICVA est une plateforme de suivi et de gestioh du secteur agricole, de la production à la vente en passant par le financement
+                                              </p>
+                                          </div>
+                                      </div>
+                                  </div>
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+          </div>
+          <!-- end col -->
+          <div class="col-xl-5">
+              <div class="auth-full-page-content p-md-5 p-4 bg-white">
+                  <div class="w-100">
+                      <div class="d-flex justify-content-center h-100">
+                          <div class="col-md-9">
+                              <div class="mt-5">
+                                  <div class="text-center">
+                                      <img src="../../../assets/assets/img/logo.png" alt="" height="70">
+                                  </div>
+                                  <div class="text-center mt-4">
+                                      <h5 class="text-primary-st">Spéculations</h5>
+                                      <div class="mt-3 text-center">
+                                          <ul class="list-inline">
+                                              <li class="list-inline-item">
+                                                  <div class="tag tag-badge-st">
+                                                      <img src="../../../assets/assets/img/cajou.png" width="30%" class="img-radius">
+                                                      <span>
+                                                                  Cajou
+                                                             </span>
+                                                      <span class="badge">✓</span>
+                                                  </div>
+                                              </li>
+                                              <li class="list-inline-item">
+                                                  <div class="tag tag-badge-st">
+                                                      <img src="../../../assets/assets/img/cacao.png" width="30%" class="img-radius">
+                                                      <span>
+                                                      Cacao
+                                                      </span>
+                                                  </div>
+                                              </li>
+                                              <li class="list-inline-item">
+                                                  <div class="tag tag-badge-st">
+                                                      <img src="../../../assets/assets/img/hevea.png" width="30%" class="img-radius">
+                                                      <span>
+                                                      Hévéa
+                                                      </span>
+                                                  </div>
+                                              </li>
+                                              <li class="list-inline-item">
+                                                  <div class="tag tag-badge-st">
+                                                      <img src="../../../assets/assets/img/karite.png" width="30%" class="img-radius">
+                                                      <span>
+                                                      karité
+                                                      </span>
+                                                  </div>
+                                              </li>
+
+                                          </ul>
+                                      </div>
+
+                                      <div *ngIf="authService.alerts" class="alert alert-danger" role="alert">
+                                        Mot de passe ou email invalide
+                                      </div>
+                                      
+                                      <div *ngIf="message" class="alert alert-danger" role="alert">
+                                         {{message}}
+                                      </div>
+
+                                      <h5 class="text-primary-st">Connexion</h5>
+                                  </div>
+                                  <div class="mt-3">
+                                      <!-- <form> -->
+                                          <div class="mb-3">
+                                              <label for="login" class="form-label">Email ou Téléphone</label>
+                                              <input type="email" name="email" #email class="form-control form-control-st" id="login">
+                                          </div>
+                                          
+                                          <div class="mb-3">
+                                              <label class="form-label">Mot de passe</label>
+                                              <div class="input-group auth-pass-inputgroup">
+                                                  <input type="password" name="password" id="password" placeholder="••••••••" #password class="form-control form-control-st" aria-label="Password">
+                                                  <button class="btn btn-light-input-st" type="button" id="password-addon"> <i class="mdi mdi-eye-outline"></i> </button>
+                                              </div>
+                                          </div>
+
+                                          <div class="mt-4 d-flex justify-content-center">
+                                              <div class="col-md-8">
+                                                  <button type="click" (click)="logIn(email.value, password.value)" class="btn btn-st"><strong>Connexion</strong></button>
+                                                  
+                                                  <div class="mt-2 text-center">
+                                                      <small> Vous avez oublier votre mat de passe? </small>
+
+                                                      <a class="fw-medium text-primary-st"> Réinitialiser votre mot de passe.</a>
+                                                  <br>
+                                                      <a href="/sign-up" class="fw-medium text-danger-st">  <h5 class="text-primary-st">Inscription</h5> </a>
+                                                  </div>
+
+                                              </div>
+                                          </div>
+                                      <!-- </form> -->
+                                  </div>
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </div>
+</div>
